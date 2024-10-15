@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87BF14DD2CB4690900E19C22 /* CashInOut in Frameworks */ = {isa = PBXBuildFile; productRef = 87BF14DC2CB4690900E19C22 /* CashInOut */; };
 		AB94100454E7F1A23EFFFC4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11819A502D78EAB4BA9269BF /* Preview Assets.xcassets */; };
 		C990FD2AE0E629A2BD98E39B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63F73E61E3D6F53B3C7197DA /* Assets.xcassets */; };
 		FC5F3BE3338322CC5823FC8E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC761C81EDE7410C386B253 /* ContentView.swift */; };
@@ -16,11 +17,22 @@
 /* Begin PBXFileReference section */
 		0CC761C81EDE7410C386B253 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		11819A502D78EAB4BA9269BF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		33B0776278B40EDB68A49324 /* CashInOutDemo.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = CashInOutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33B0776278B40EDB68A49324 /* CashInOutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashInOutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63F73E61E3D6F53B3C7197DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		951B83C10DEC46AE6ABBAF4B /* CashInOutDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CashInOutDemo.entitlements; sourceTree = "<group>"; };
 		B289B2735AA6C49C987D7AC6 /* CashInOutDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashInOutDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87BF14DB2CB468E500E19C22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BF14DD2CB4690900E19C22 /* CashInOut in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		36399723E184BB76F1BA1F75 /* Preview Content */ = {
@@ -48,7 +60,6 @@
 				36399723E184BB76F1BA1F75 /* Preview Content */,
 				68F667BEAEC7E947F9998BB1 /* Resources */,
 			);
-			name = CashInOutDemo;
 			path = CashInOutDemo;
 			sourceTree = "<group>";
 		};
@@ -87,12 +98,17 @@
 				700BFE9D37F41467A46AE40B /* Sources */,
 				66EDDBDEFDF32839C24C25EF /* Run Script */,
 				5B5C71462FA72888FA0644E8 /* Resources */,
+				87BF14DB2CB468E500E19C22 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CashInOutDemo;
+			packageProductDependencies = (
+				87BF14DA2CB468AA00E19C22 /* CashInOut */,
+				87BF14DC2CB4690900E19C22 /* CashInOut */,
+			);
 			productName = CashInOutDemo;
 			productReference = 33B0776278B40EDB68A49324 /* CashInOutDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -105,8 +121,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = C89ADE6C3DC491038CC5A219 /* Build configuration list for PBXProject "CashInOutDemo" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -117,6 +131,9 @@
 				en,
 			);
 			mainGroup = 9D20BB0865080171F470B58A;
+			packageReferences = (
+				87BF14D92CB468AA00E19C22 /* XCLocalSwiftPackageReference ".." */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -236,7 +253,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -252,7 +271,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +373,24 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		87BF14D92CB468AA00E19C22 /* XCLocalSwiftPackageReference ".." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ..;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		87BF14DA2CB468AA00E19C22 /* CashInOut */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CashInOut;
+		};
+		87BF14DC2CB4690900E19C22 /* CashInOut */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CashInOut;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3501ECE7F57FB3D172D75BBD /* Project object */;
 }
