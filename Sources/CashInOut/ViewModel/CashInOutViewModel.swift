@@ -16,7 +16,7 @@ public final class CashInOutViewModel: ObservableObject {
     // MARK: Dependencies
     
     @Dependency var saveTransactionService: SaveTransactionService
-    @Dependency var navigationService: NavigationService
+    @Dependency var navigationService: any NavigationService
     
     // MARK: Textfields published
     
