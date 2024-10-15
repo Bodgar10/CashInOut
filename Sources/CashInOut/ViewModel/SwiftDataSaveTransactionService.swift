@@ -11,10 +11,6 @@ import SwiftUI
 import CashSwitchboard
 import Common
 
-public protocol SaveTransactionService: Service {
-    func save(transaction: CashSwitchboard.Transaction) -> Bool
-}
-
 public class SwiftDataSaveTransactionService: SaveTransactionService {
     
     private let modelContext: ModelContext
