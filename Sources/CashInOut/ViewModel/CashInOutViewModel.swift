@@ -50,7 +50,9 @@ public final class CashInOutViewModel: ObservableObject {
             showingAlert = true
         } else {
             let category = convertToCategory()
-            let transaction = Transaction(category: category, subcategory: subcategory, amount: Double(amount) ?? 0.0, date: Date())
+            let dAmount = Double(amount) ?? 0.0
+            let amount = type == "CashIn" ? dAmount : -dAmount
+            let transaction = Transaction(category: category, subcategory: subcategory, amount: amount, date: Date())
             alertMessage = saveTransactionService.save(transaction: transaction) ? "Se guardó tu \(transactionType) correctamente" : "No se pudo guardar tu \(transactionType), por favor inténtalo de nuevo."
             showingAlert = true
         }
